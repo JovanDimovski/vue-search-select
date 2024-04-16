@@ -139,7 +139,7 @@ export default {
         return this.nonSelectOptions.filter(option => {
           try {
             if (this.cleanSearch) {
-              return this.filterPredicate(this.accentsTidy(option.text), this.searchText)
+              return this.filterPredicate(this.accentsTidy(option.text), this.accentsTidy(this.searchText))
             } else {
               return this.filterPredicate(option.text, this.searchText)
             }
